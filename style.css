@@ -29,7 +29,7 @@ body {
 }
 
 .card {
-    border-radius: 1.25rem;
+    border-radius: 1.5rem;
     padding: 1.25rem;
     background-color: var(--White);
     display: -webkit-box;
