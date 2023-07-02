@@ -136,8 +136,8 @@ body {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
-    background-image: -webkit-gradient(linear, left top, right top, from(#ff5869), to(#ff9542));
     background-image: -o-linear-gradient(left, #ff5869, #ff9542);
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff5869), to(#ff9542));
     background-image: linear-gradient(to right, #ff5869, #ff9542);
 }
 
@@ -157,6 +157,10 @@ body {
 
 .message h1 {
     margin: 1.25rem 0;
+}
+
+.message .changeable-content {
+    word-wrap: break-word;
 }
 
 .attribution {
