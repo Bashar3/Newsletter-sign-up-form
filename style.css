@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Charcoal_Grey);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.card {
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    background-color: var(--White);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 40.625rem;
+    height: 40.625rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card .col-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5rem 3.75rem;
+}
+
+.card .col-1 h2,
+.message h2 {
+    font-size: 3.4375rem;
+    color: var(--Dark_Slate_Grey);
+}
+
+.card .col-1 ul {
+    list-style: none;
+}
+
+.card .col-1 ul li {
+    margin: 1.25rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card .col-1 ul li::before {
+    content: "";
+    width: 1.40625rem;
+    height: 1.40625rem;
+    display: inline-block;
+    margin-right: 0.625rem;
+    background-image: url(assets/images/icon-success.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card .col-1 .email label {
+    font-size: 0.8125rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.625rem;
+    color: var(--Dark_Slate_Grey);
+}
+
+.card .col-1 .email input[type="text"] {
+    padding: 1.09375rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--Grey);
+    outline: none;
+    display: block;
+    width: 100%;
+}
+
+.card .col-1 .email .error-msg {
+    color: #FF3333;
+    font-size: 0.75rem;
+    visibility: hidden;
+    -webkit-transition: 250ms;
+    -o-transition: 250ms;
+    transition: 250ms;
+}
+
+.main-btn {
+    border: none;
+    padding: 1.09375rem;
+    border-radius: 0.5rem;
+    color: var(--White);
+    background-color: var(--Dark_Slate_Grey);
+    font-size: 0.875rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.25rem;
+    -webkit-transition: 250ms;
+    -o-transition: 250ms;
+    transition: 250ms;
+}
+
+.main-btn:hover {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff5869), to(#ff9542));
+    background-image: -o-linear-gradient(left, #ff5869, #ff9542);
+    background-image: linear-gradient(to right, #ff5869, #ff9542);
+}
+
+
+.card img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.message {
+    background-color: var(--White);
+    border-radius: 1.25rem;
+    margin-top: 20px;
+    padding: 3rem;
+    max-width: 400px;
+}
+
+.message h2 {
+    margin: 1.25rem 0;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: #FF9966;
+    text-decoration: none;
+}
+
+.disabled {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11px;
+    }
+
+    .card .col-1 {
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    body {
+        margin: 3rem 1rem;
+    }
+
+    .attribution {
+        bottom: -1.5rem;
+    }
+}
